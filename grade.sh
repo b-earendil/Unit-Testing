@@ -25,12 +25,12 @@ then
 fi
 
 # Convert file to Unix
-dos2unix * &> /dev/null
-if [[ $? -ne 0 ]]
-then
-    echoerr "dos2unix failed"
-    exit ${EXIT_FAILURE}
-fi
+# dos2unix * &> /dev/null
+# if [[ $? -ne 0 ]]
+# then
+#     echoerr "dos2unix failed"
+#     exit ${EXIT_FAILURE}
+# fi
 
 # Find total number of tests
 total=$(python3 ./textproc_test.py -v 2>&1 | grep -P '^Ran \d+ tests' | cut -d ' ' -f 2)
@@ -74,5 +74,6 @@ then
 fi
 
 # Output grade
+echo ${total}
 echo ${grade}
 exit ${EXIT_SUCCESS}
