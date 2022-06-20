@@ -11,6 +11,7 @@ A simple module with various Text Processing Capabilities
 
 """
 
+
 # Imports
 
 import re
@@ -84,7 +85,7 @@ class Processor:
 
         """
 
-        alpha = re.compile(r'[a-z]')
+        alpha = re.compile(r'[A-Za-z]')
         return len(alpha.findall(self.text))
 
     def count_numeric(self):
@@ -95,7 +96,7 @@ class Processor:
 
         """
 
-        alpha = re.compile(r'[1-9]')
+        alpha = re.compile(r'[0-9]')
         return len(alpha.findall(self.text))
 
     def count_vowels(self):
