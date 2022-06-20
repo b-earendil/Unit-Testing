@@ -107,7 +107,7 @@ class Processor:
 
         """
 
-        vowels = re.compile(r'[aeou]', re.IGNORECASE)
+        vowels = re.compile(r'[aeiou]', re.IGNORECASE)
         return len(vowels.findall(self.text))
 
     def is_phonenumber(self):

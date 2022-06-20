@@ -82,6 +82,21 @@ class TextprocTestCase(unittest.TestCase):
         p = textproc.Processor(text)
         self.assertEqual(p.count_numeric(), 10, "numeric count of 'text' is not 3")
 
+    # Write one or more unit tests to test the count_vowels() method
+    def test_count_vowels(self):
+        text = "hello"
+        p = textproc.Processor(text)
+        self.assertEqual(p.count_vowels(), 2, "vowel count of 'text' is not 2")
+        text = "aeiou"
+        p = textproc.Processor(text)
+        self.assertEqual(p.count_vowels(), 5, "vowel count of 'text' is not 5")
+        text = "Apple"
+        p = textproc.Processor(text)
+        self.assertEqual(p.count_vowels(), 2, "vowel count of 'text' is not 2")
+        text = "AEIOU"
+        p = textproc.Processor(text)
+        self.assertEqual(p.count_vowels(), 5, "vowel count of 'text' is not 5")
+
 
 
 
