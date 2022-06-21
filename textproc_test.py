@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Andy Sayler
-# Summer 2014
-# CSCI 3308
+# Ben Adams
+# Summer 2022
+# CSPB 3308
 # Univerity of Colorado
 # Text Processing Module
+# Unit Testing 
 
 import unittest
 import textproc
