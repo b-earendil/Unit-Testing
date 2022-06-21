@@ -60,6 +60,9 @@ class TextprocTestCase(unittest.TestCase):
         text = "!@#$%^&*()-+[]{}5nOpE5"
         p = textproc.Processor(text)
         self.assertEqual(p.count_alpha(), 4, "alpha count of 'text' is not 4")
+        text = "9NOPE"
+        p = textproc.Processor(text)
+        self.assertEqual(p.count_alpha(), 4, "alpha count of 'text' is not 4")
 
     # Write one or more unit tests to test the count_numeric() method
     def test_count_numeric(self):
