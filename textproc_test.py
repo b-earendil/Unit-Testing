@@ -97,6 +97,23 @@ class TextprocTestCase(unittest.TestCase):
         p = textproc.Processor(text)
         self.assertEqual(p.count_vowels(), 5, "vowel count of 'text' is not 5")
 
+    # Write one or more unit tests to test the is_phonenumber() method
+    def  test_phone(self):
+        text = "(555) 555-5555"
+        p = textproc.Processor(text)
+        self.assertEqual(p.is_phonenumber(), True, "'text' is an invalid phone number")
+        text = "555-555-5555"
+        p = textproc.Processor(text)
+        self.assertEqual(p.is_phonenumber(), True, "'text' is an invalid phone number")
+        text = "555 555 5555"
+        p = textproc.Processor(text)
+        self.assertEqual(p.is_phonenumber(), True, "'text' is an invalid phone number")
+        text = "555.555.5555"
+        p = textproc.Processor(text)
+        self.assertEqual(p.is_phonenumber(), True, "'text' is an invalid phone number")
+        text = "(555) 555-5555"
+        p = textproc.Processor(text)
+        self.assertEqual(p.is_phonenumber(), True, "'text' is an invalid phone number")
 
 
 
